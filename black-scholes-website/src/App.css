@@ -1,0 +1,68 @@
+.main-container {
+    height: 100vh;
+    background-color: #CED0CE;
+}
+
+.main-header{
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.main-display {
+    padding: 2rem;
+    display: flex;
+}
+
+.input-container {
+    width: 50%;
+}
+
+.input-inner-container {
+    display: flex;
+}
+
+.label{
+    width: 50%;
+    padding: 1rem;
+}
+.label p{
+ padding: 0.5rem;
+}
+
+.input {
+    width: 50%;
+    padding: 1rem;
+}
+.input input{
+    padding: 0.5rem;
+    border-radius: 0.5rem;;
+}
+.input:focus {
+    border-color: red;
+}
+
+.prices {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.call-price {
+    width: 50%;
+    background-color: #acffac;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.put-price {
+    width: 50%;
+    background-color: #ff9797;
+    border-radius: 1rem;
+    padding: 2rem;
+}
