@@ -6,7 +6,7 @@ from backend.black_scholes import black_scholes_calculation
 app = FastAPI()
 
 origins = [
-    "https://black-scholes-model-taupe.vercel.app"
+    "https://black-scholes-model-ruddy.vercel.app"
 ]
 
 app.add_middleware(
