@@ -7,7 +7,7 @@ app = FastAPI()
 
 origins = [
     "http://localhost:5173",
-    "https://black-scholes-website.vercel.app"
+    "https://black-scholes-model-taupe.vercel.app"
 ]
 
 app.add_middleware(
