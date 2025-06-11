@@ -41,7 +41,7 @@ function App() {
 
   const fetchPrices = async () => {
     try {
-      const res = await axios.post("http://localhost:8000/price", params);
+      const res = await axios.post("/api/price", params);
       setOptionsPrice(res.data);
     } catch (error) {
       console.error("Error fetching prices:", error);
