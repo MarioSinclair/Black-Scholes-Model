@@ -1,0 +1,22 @@
+:root {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    background-color: #2F394D;
+    color: whitesmoke ;
+}
+body {
+    margin: 0;
+}
+h1 {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+p {
+    margin: 0;
+}
+input {
+    margin: 0;
+    padding: 0;
+}

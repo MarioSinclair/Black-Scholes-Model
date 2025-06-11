@@ -31,6 +31,6 @@ async def get_option_price(params: Parameters):
     put_price = round(put_price, 2)
 
     return {
-        "call_price": call_price,
-        "put_price": put_price
+        "call_price": f"{call_price:.2f}",
+        "put_price": f"{put_price:.2f}"
     }

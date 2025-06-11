@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
+import Custom_Button from './custom_button.jsx'
 
 function App() {
 
@@ -8,16 +9,32 @@ function App() {
     S: 100,
     K: 100,
     T: 1,
-    V: 0.2,
-    R: 0.05
+    R: 0.05,
+    V: 0.2
   });
+
+  const paramSteps = {
+    S: 0.01,
+    K: 0.01,
+    T: 0.01,
+    R: 0.01,
+    V: 0.01
+  };
+
+  const paramMins = {
+    S: 0,
+    K: 0,
+    T: 0,
+    R: 0,
+    V: 0
+  };
   
   const paramLabels = {
     S: "Current Stock Price ($)", // Added units/symbols for clarity
     K: "Strike Price ($)",
     T: "Time to Expiration (Years)",
-    R: "Risk-Free Rate (%)",
-    V: "Volatility (%)"
+    R: "Risk-Free Rate",
+    V: "Volatility "
   };  
 
   const [optionsPrice, setOptionsPrice] = useState(null);
@@ -35,48 +52,44 @@ function App() {
     fetchPrices();
   }, [params]);
 
-  const handleParamChange = (e) => {
+  const handleParamChange = (name, value) => {
     setParams({
       ...params,
-      [e.target.name]: parseFloat(e.target.value)
+      [name]: value
     });
   };
 
   return (
     <div className="main-container">
-      
       <div className="main-header">
-        <h1>Black Scholes Options Pricer</h1>
+        <h1>Black-Scholes Options Pricer</h1>
       </div>
       <div className="main-display">
-        <div className="input-container">
+        <div className="parameter-container">
           {Object.keys(params).map((key) => (
-            <div className="input-inner-container" key={key}>
+            <div className="parameter-inner-container" key={key}>
               <div className="label">
                 <p>
                   {paramLabels[key] || key} :
                 </p>
               </div>
-              <div className="input">
-                <input
-                  id={key} 
-                  className='input-but'
-                  type="number"
+                <Custom_Button
                   name={key}
                   value={params[key]}
                   onChange={handleParamChange}
+                  step={paramSteps[key]}
+                  min={paramMins[key]}
                 />
-              </div>
             </div>
           ))}
         </div>
         {optionsPrice && (
           <div className="prices">
             <div className="call-price">
-              <p>Call Price: ${optionsPrice.call_price}</p>
+              Call Price: ${optionsPrice.call_price}
             </div>
             <div className="put-price">
-              <p>Put Price: ${optionsPrice.put_price}</p>
+              Put Price: ${optionsPrice.put_price}
             </div>
           </div>
         )}
