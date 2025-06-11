@@ -25,7 +25,7 @@ class Parameters(BaseModel):
     V: float
     R: float
 
-@app.post("/price")
+@app.post("api/price")
 async def get_option_price(params: Parameters):
     call_price, put_price = black_scholes_calculation(params.S, params.K, params.T, params.V, params.R)
     call_price = round(call_price, 2)
