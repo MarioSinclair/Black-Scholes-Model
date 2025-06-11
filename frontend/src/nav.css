@@ -48,10 +48,10 @@
 
 .bar {
   width: 100%;
-  height: 2rem;
+  height: 0.25rem;
+  margin: 3px;
   background: #fff;
-  margin: 4px 0;
-  border-radius: 2px;
+  border-radius: 100px;
   transition: 0.4s;
   position: relative;
 }
@@ -72,6 +72,10 @@
 @media (max-width: 800px) {
   .burger-menu {
     display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 1.25rem;
   }
   .navbar-links {
     display: flex;
@@ -80,14 +84,14 @@
     top: 0;
     right: 0;
     height: 8rem;
-    width: 10rem;
+    width: 8rem;
     background: #2F394D;
-    border-radius: 0 0.5rem 0.5rem 0;
+    border-radius: 0.5rem;
     box-shadow: 2px 0 8px rgba(0,0,0,0.15);
     padding: 2rem 1rem;
     z-index: 1000;
     transform: translateX(100%);
-    transition: transform 0.3s cubic-bezier(.77,0,.18,1);
+    transition: transform 0.5s ease-in-out;
     opacity: 1;
     pointer-events: none;
   }
