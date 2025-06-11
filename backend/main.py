@@ -6,7 +6,6 @@ from backend.black_scholes import black_scholes_calculation
 app = FastAPI()
 
 origins = [
-    "http://localhost:5173",
     "https://black-scholes-model-taupe.vercel.app"
 ]
 
