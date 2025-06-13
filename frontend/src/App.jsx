@@ -64,11 +64,18 @@ function App() {
       <div className="main-header">
         <h1>Black-Scholes Options Pricer</h1>
       </div>
+      <div className="main-paragraph">
+        <p>
+          The Black-Scholes-Merton (BSM) model stands as a landmark achievement in financial economics,
+          providing the first widely accepted theoretical framework for valuing European options.The collaborative work of 
+          Fischer Black, Myron Scholes, and Robert Merton revolutionized the way options were understood, traded and managed.
+        </p>
+      </div>
       <div className="main-display">
         <div className="parameter-container">
           {Object.keys(params).map((key) => (
             <div className="parameter-inner-container" key={key}>
-              <div className="label">
+               <div className="label">
                 <p>
                   {paramLabels[key] || key} :
                 </p>
@@ -94,6 +101,7 @@ function App() {
           </div>
         )}
       </div>
+      <div className='extra'>.</div>
     </div>
   );
 }

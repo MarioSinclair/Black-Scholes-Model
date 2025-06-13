@@ -6,7 +6,7 @@
     font-size: 1.5rem;
     font-weight: 400;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 3rem 0rem 1rem 1rem;
 }   
 
 .main-display {
@@ -16,6 +16,13 @@
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 3rem;
+}
+
+.main-paragraph {
+    margin: auto;
+    width: 70%;
+    text-align: center;
+    padding: 1rem;
 }
 
 .parameter-container {
@@ -40,6 +47,11 @@
         align-items: center;
     }
 
+    .main-paragraph {
+        width: 80%;
+        text-align: justify;
+    }
+
     .prices {
         width: 70% !important;
     }
@@ -56,15 +68,14 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 0.5rem;
-    background-color: #252d3c;
+    background-color: #d1d1d1;
     padding: 0.5rem;
 }
 .input-container input{
     width: 100%;
     height: 2rem;
-    background-color: #252d3c;
-    border: 1px solid #252d3c;
-    color: whitesmoke;
+    background-color: #d1d1d1;
+    border: 1px solid transparent;
 }
 .input-container input[type="number"]:focus{
     outline: none;
@@ -103,4 +114,8 @@
     background-color: #F52F57;
     border-radius: 1rem;
     padding: 2rem;
+}
+
+.extra {
+    height: 100vh;
 }

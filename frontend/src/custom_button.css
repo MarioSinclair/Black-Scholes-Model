@@ -2,7 +2,7 @@
 .button-container {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
 }
 .input-container input[type="number"]::-webkit-outer-spin-button,
 .input-container input[type="number"]::-webkit-inner-spin-button {
@@ -14,10 +14,10 @@
   appearance: textfield;
 }
 .input-container button {
-  padding: 0.25rem 0.75rem;
+  width: 2rem;
+  height: 1.75rem;
   font-size: 1.2rem;
-  background: #252d3c;
-  color: white;
+  background: #d1d1d1;
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -29,6 +29,6 @@
   background: #F52F57;
 }
 .input-container:focus-within {
-  border: 1px solid #ff9797;
+  border: 1px solid #0A1128;
 }
 /* ...existing code... */
