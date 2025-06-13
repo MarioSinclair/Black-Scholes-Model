@@ -17,8 +17,8 @@ class Parameters(BaseModel):
     S: float
     K: float
     T: float
-    V: float
     R: float
+    V: float
 
 @app.post("/api/price")
 async def get_option_price(params: Parameters):
