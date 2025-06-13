@@ -5,8 +5,8 @@ def black_scholes_calculation(stock_price, strike_price, time_to_expiration, vol
     S = stock_price
     K = strike_price
     T = time_to_expiration
-    V = volatility
     R = risk_free_interest
+    V = volatility
                             
     d1 = (np.log(S/K) + (R + (V**2) * 0.5) * T) / (V*np.sqrt(T))
     d2 = d1 - V * np.sqrt(T)
