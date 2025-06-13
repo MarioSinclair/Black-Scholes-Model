@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import './custom_button.css'
+import './CustomButton.css'
 
 function Button({ min = 0, max = Infinity, step = 1, value, onChange, name}) {
 

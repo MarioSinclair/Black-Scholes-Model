@@ -1,17 +1,13 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from backend.black_scholes import black_scholes_calculation
+from black_scholes import black_scholes_calculation
 
 app = FastAPI()
 
-origins = [
-    "https://black-scholes-model-ruddy.vercel.app"
-]
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["https://black-scholes-pricing-ruddy.vercel.app/"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

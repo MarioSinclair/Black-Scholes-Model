@@ -10,9 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
     "axios": "^1.9.0",
+    "framer-motion": "^12.18.1",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-awesome-reveal": "^4.3.1",
+    "react-burger-menu": "^3.1.0",
+    "react-dom": "^19.1.0",
+    "react-parallax-tilt": "^1.7.298",
+    "react-typed": "^2.0.12"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

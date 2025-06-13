@@ -1,6 +1,6 @@
 .navbar {
   height: 2.5rem;
-  width: 90%;
+  width: 80%;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -70,22 +70,14 @@
 /* Responsive styles */
 @media (max-width: 800px) {
   .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-
-  .main-header {
-    margin-top: 2.5rem;
+    width: 85%;
   }
 
   .burger-menu {
     display: flex;
-    position: fixed;
     top: 0;
     right: 0;
     height: 1.5rem;
-    padding: 1rem;
   }
   .navbar-links {
     display: flex;

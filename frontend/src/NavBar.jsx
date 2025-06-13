@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './nav.css'
+import './NavBar.css'
 
 function Nav() {
 
@@ -9,7 +9,7 @@ function Nav() {
         <nav >
             <div className="navbar">
                 <div className="navbar-logo">
-                    <p>Black-Scholes Pricing</p>
+                    <p>Black-Scholes Model</p>
                 </div>
                 <div
                 className={`burger-menu${menuOpen ? ' open' : ''}`}
@@ -27,6 +27,7 @@ function Nav() {
                     <li><a href="/about">About</a></li>
                 </ul>
             </div>
+            
         </nav>
     );
 

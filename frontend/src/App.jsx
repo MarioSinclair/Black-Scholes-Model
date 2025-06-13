@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { ReactTyped } from 'react-typed';
+import { Fade } from "react-awesome-reveal";
 import './App.css';
-import Custom_Button from './custom_button.jsx'
+import Custom_Button from './CustomButton.jsx'
+import Tilt from 'react-parallax-tilt'
 
 function App() {
 
@@ -41,7 +44,7 @@ function App() {
 
   const fetchPrices = async () => {
     try {
-      const res = await axios.post("/api/price", params);
+      const res = await axios.post("api/price", params);
       setOptionsPrice(res.data);
     } catch (error) {
       console.error("Error fetching prices:", error);
@@ -62,14 +65,22 @@ function App() {
   return (
     <div className="main-container">
       <div className="main-header">
-        <h1>Black-Scholes Options Pricer</h1>
+        <ReactTyped
+          strings={[
+            "Black-Scholes Model"
+          ]}
+          typeSpeed={70}
+          backSpeed={100}
+        />
       </div>
       <div className="main-paragraph">
-        <p>
-          The Black-Scholes-Merton (BSM) model stands as a landmark achievement in financial economics,
-          providing the first widely accepted theoretical framework for valuing European options.The collaborative work of 
-          Fischer Black, Myron Scholes, and Robert Merton revolutionized the way options were understood, traded and managed.
+        <Fade cascade damping={0.01} direction='right' triggerOnce>
+          <p>The Black-Scholes-Merton (BSM) model stands as a landmark achievement in financial economics.
+          It provided the first widely accepted theoretical framework for valuing European options.
+          The collaborative work of Fischer Black, Myron Scholes, and Robert Merton revolutionized the way
+           options were understood, traded and managed.
         </p>
+        </Fade>
       </div>
       <div className="main-display">
         <div className="parameter-container">
@@ -92,16 +103,31 @@ function App() {
         </div>
         {optionsPrice && (
           <div className="prices">
-            <div className="call-price">
-              Call Price: ${optionsPrice.call_price}
-            </div>
-            <div className="put-price">
-              Put Price: ${optionsPrice.put_price}
-            </div>
+            <Tilt
+              style={{
+                width: "100%",
+                borderRadius: "12px",
+              }}
+            >
+              <div className="call-price">
+                Call Price: ${optionsPrice.call_price}
+              </div>
+            </Tilt>
+            <Tilt
+              style={{
+                width: "100%",
+                borderRadius: "12px",
+              }}
+            >
+              <div className="put-price">
+                Put Price: ${optionsPrice.put_price}
+              </div>
+            </Tilt>
           </div>
         )}
       </div>
       <div className='extra'>.</div>
+      
     </div>
   );
 }
