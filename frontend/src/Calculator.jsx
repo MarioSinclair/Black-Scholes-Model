@@ -66,7 +66,7 @@ export default function Calculator() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.4 }}
-          viewport={{margin: "-200px"}}
+          viewport={{once: true}}
         >
         <div className="main-heading">
           <p>Calculator</p>
