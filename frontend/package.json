@@ -12,12 +12,17 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "axios": "^1.9.0",
+    "better-react-mathjax": "^2.3.0",
     "framer-motion": "^12.18.1",
+    "motion": "^12.18.1",
+    "plotly.js": "^3.0.1",
     "react": "^19.1.0",
     "react-awesome-reveal": "^4.3.1",
     "react-burger-menu": "^3.1.0",
     "react-dom": "^19.1.0",
     "react-parallax-tilt": "^1.7.298",
+    "react-plotly.js": "^2.6.0",
+    "react-type-animation": "^3.2.0",
     "react-typed": "^2.0.12"
   },
   "devDependencies": {

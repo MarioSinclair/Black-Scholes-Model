@@ -11,7 +11,7 @@ export default function ScrollBar() {
                 style={{
                     scaleX: scrollYProgress,
                     position: "fixed",
-                    bottom: 0,
+                    top: 0,
                     left: 0,
                     right: 0,
                     height: "4px",

@@ -1,0 +1,44 @@
+/* TextLoop.css */
+
+.text-loop {
+  width: 70%;
+  display: flex;
+  margin: auto;
+  padding: 1rem 0rem;
+  box-sizing: border-box;
+}
+
+.text {
+  margin-right: 10px;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+
+.highlight-text {
+  text-align: left;
+  color: #ff0000;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 800px) {
+
+    .text-loop {
+      width: 80%;
+      flex-wrap: wrap;
+      padding: 1.5rem 0;
+    }
+
+    .text {
+        font-size: 1rem; 
+        margin-right: 0;
+        text-align: left;
+    }
+    
+    .highlight-text {
+      color: #ff0000;
+      font-size: 1rem;
+      text-align: left;
+      padding: 0;
+    }
+}
