@@ -6,6 +6,9 @@ import Nav from './NavBar.jsx'
 import HeatMap from './HeatMap.jsx'
 import Calculator from './Calculator.jsx'
 import ScrollBar from './ScrollBar.jsx'
+import Formula from './Formula.jsx'
+import Information from './Info.jsx'
+import Footer from './Footer.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -13,5 +16,8 @@ createRoot(document.getElementById('root')).render(
     <App />
     <Calculator />
     <ScrollBar />
+    <Formula />
+    <Information />
+    <Footer />
   </StrictMode>
 )

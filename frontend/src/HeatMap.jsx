@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Plot from 'react-plotly.js';
 
-function App() {
+export default function App() {
   const [chartData, setChartData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -230,5 +230,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

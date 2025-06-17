@@ -6,11 +6,12 @@
   margin: auto;
   padding: 1rem 0rem;
   box-sizing: border-box;
+  text-align: center;
 }
 
 .text {
-  margin-right: 10px;
-  font-size: 1.5rem;
+  margin-right: 5px;
+  font-size: 1.2rem;
   text-align: left;
 }
 
@@ -19,7 +20,7 @@
   display: block;
   text-align: left;
   color: #2D728F;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 800px) {
@@ -27,7 +28,6 @@
     .text-loop {
       width: 80%;
       flex-wrap: wrap;
-      padding: 1.5rem 0;
     }
 
     .text {

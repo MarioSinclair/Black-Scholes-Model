@@ -22,11 +22,21 @@
   border-radius: 0.25rem;
   cursor: pointer;
 }
+
+.inc-button {
+  color: #F52F57;
+}
+.dec-button {
+  color: #23CE6B;
+}
+
 .button-container .inc-button:hover {
-  background: #23CE6B;
+  color: #0A1128;
+  background: #F52F57;
 }
 .button-container .dec-button:hover {
-  background: #F52F57;
+  color: #0A1128;
+  background: #23CE6B;
 }
 .input-container:focus-within {
   border: 1px solid #0A1128;

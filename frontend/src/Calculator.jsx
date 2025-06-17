@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Custom_Button from './CustomButton.jsx'
-import Tilt from 'react-parallax-tilt'
-import { motion } from "motion/react";
+import Custom_Button from './CustomButton.jsx';
+import Tilt from 'react-parallax-tilt';
 import './Calculator.css';
 
 export default function Calculator() {
@@ -19,7 +18,7 @@ export default function Calculator() {
     S: 0.01,
     K: 0.01,
     T: 0.01,
-    R: 0.01,
+    R: 0.001,
     V: 0.01
   };
 
@@ -29,6 +28,17 @@ export default function Calculator() {
     T: 0,
     R: 0,
     V: 0
+  };
+
+  const paramMaxs = {
+    R: 0.1,
+    V: 1,
+  };
+
+  const [value, setValue] = useState(50);
+
+  const handleChange = (event) => {
+    setValue(event.target.value);
   };
   
   const paramLabels = {
@@ -75,16 +85,34 @@ export default function Calculator() {
                     {paramLabels[key] || key} :
                     </p>
                 </div>
-                    <Custom_Button
+                {['R', 'V'].includes(key) ? (
+                  <div>
+                    <input
+                    className=" slider"
+                    type="range"
+                    min={paramMins[key]}
+                    max={paramMaxs[key]}
+                    step={paramSteps[key]}
+                    value={params[key]}
+                    onChange={(e) =>
+                      handleParamChange(key, parseFloat(e.target.value))
+                    }
+                  />
+                   <div className="value-display">
+                    {(params[key] * 100).toFixed(1)}%
+                  </div>
+                  </div>
+                ) : (
+                  <Custom_Button
                     name={key}
                     value={params[key]}
                     onChange={handleParamChange}
                     step={paramSteps[key]}
                     min={paramMins[key]}
-                    />
+                  />
+                )}
                 </div>
               ))}
-                
             </div>
             {optionsPrice && (
               <div className="prices">
