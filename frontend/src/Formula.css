@@ -2,8 +2,13 @@
     font-size: 1rem;
 }
 
+
 @media (max-width: 800px) {
     .formula {
         font-size: 0.8rem;
+    }
+    
+    .paragraph {
+        width: 100%; 
     }
 }

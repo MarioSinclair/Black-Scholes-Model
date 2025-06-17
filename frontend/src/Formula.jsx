@@ -1,6 +1,5 @@
 import React from "react";
 import { MathJaxContext, MathJax } from "better-react-mathjax";
-
 import TextLoop from './TextLoop';
 import './Formula.css'
 
