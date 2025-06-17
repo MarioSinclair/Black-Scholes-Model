@@ -36,7 +36,7 @@ export default function TextLoop() {
   return (
     <div className="text-loop">
         <div className="text">
-            <p>The five key inputs for the formula are:</p>
+            <p>Formula Components:</p>
         </div>
         <AnimatePresence mode="wait">
             <motion.div

@@ -23,7 +23,7 @@ function Nav() {
                 </div>
                 <ul className={`navbar-links${menuOpen ? ' show' : ''}`}>
                     <li><a href="/">Home</a></li>
-                    <li><a href="/calculator">Calculator</a></li>
+                    <li><a href="#calc">Calculator</a></li>
                     <li><a href="/about">About</a></li>
                 </ul>
             </div>

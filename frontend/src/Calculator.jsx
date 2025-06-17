@@ -62,37 +62,32 @@ export default function Calculator() {
   };
 
     return (
-      <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.4 }}
-          viewport={{once: true, amount: 0.3}}
-        >
-        <div className="main-heading">
-          <p>Calculator</p>
-        </div>
+        <div className="calculator-section" id='calc'>
+          <div className="main-heading">
+            <p>Calculator</p>
+          </div>
         <div className="main-display">
             <div className="parameter-container">
-                {Object.keys(params).map((key) => (
-                  <div className="parameter-inner-container" key={key}>
-                  <div className="label">
-                      <p>
-                      {paramLabels[key] || key} :
-                      </p>
-                  </div>
-                      <Custom_Button
-                      name={key}
-                      value={params[key]}
-                      onChange={handleParamChange}
-                      step={paramSteps[key]}
-                      min={paramMins[key]}
-                      />
-                  </div>
-                ))}
+              {Object.keys(params).map((key) => (
+                <div className="parameter-inner-container" key={key}>
+                <div className="label">
+                    <p>
+                    {paramLabels[key] || key} :
+                    </p>
+                </div>
+                    <Custom_Button
+                    name={key}
+                    value={params[key]}
+                    onChange={handleParamChange}
+                    step={paramSteps[key]}
+                    min={paramMins[key]}
+                    />
+                </div>
+              ))}
                 
             </div>
             {optionsPrice && (
-            <div className="prices">
+              <div className="prices">
                 <Tilt
                 style={{
                     width: "100%",
@@ -115,9 +110,9 @@ export default function Calculator() {
                     Put Price: ${optionsPrice.put_price}
                 </div>
                 </Tilt>
-            </div>
+              </div>
             )}
+          </div>
         </div>
-      </motion.div>  
     )
 }
