@@ -6,7 +6,7 @@ import './Formula.css'
 export default function Formula() {
   return (
     <div className="formula" id="form" >
-                <div className="main-heading">
+          <div className="main-heading">
             <p>Formula</p>
           </div>
           <br />
