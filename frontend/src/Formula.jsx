@@ -9,7 +9,6 @@ export default function Formula() {
           <div className="main-heading">
             <p>Formula</p>
           </div>
-          <br />
           <div className="paragraph">
             <p>
               The BSM model culminates in a partial differential equation (PDE) that describes how the price of an option changes over time. 
