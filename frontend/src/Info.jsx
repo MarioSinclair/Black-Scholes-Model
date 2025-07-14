@@ -5,7 +5,7 @@ export default function Info() {
         <div className='info-section' id='info'>
             <div className="paragraph">
                 <div className="main-heading">
-                    <p1>Key Assumptions</p1>
+                    <p>Key Assumptions</p>
                 </div>  
                 <p>
                     The elegance and closed-form solution of the BSM model are achieved through a set of simplifying

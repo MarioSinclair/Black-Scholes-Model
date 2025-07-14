@@ -9,7 +9,7 @@ export default function GreeksVisualizer() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/greeks-plot?param=${param}`)
+      .get(`https://black-scholes-model-uhsp.onrender.com/api/greeks-plot?param=${param}`)
       .then((res) => {
         const xValues = res.data.x;
         const yValues = res.data.greeks[greek];

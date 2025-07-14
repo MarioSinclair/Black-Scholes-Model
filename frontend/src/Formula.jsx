@@ -9,7 +9,7 @@ export default function Formula() {
           
           <div className="paragraph">
           <div className="main-heading">
-            <p1>Formula</p1>
+            <p>Formula</p>
           </div>
             <p>
               The equation works by modeling how the price of the option changes over time, assuming the stock moves randomly but with a known average and risk.
