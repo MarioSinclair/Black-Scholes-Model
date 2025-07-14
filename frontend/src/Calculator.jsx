@@ -3,6 +3,7 @@ import axios from 'axios';
 import Custom_Button from './CustomButton.jsx';
 import Tilt from 'react-parallax-tilt';
 import './Calculator.css';
+import Greeks from './Greeks.jsx';
 
 export default function Calculator() {
     
@@ -53,7 +54,7 @@ export default function Calculator() {
 
   const fetchPrices = async () => {
     try {
-      const res = await axios.post("/api/price", params);
+      const res = await axios.post("http://localhost:8000/api/price", params);
       setOptionsPrice(res.data);
     } catch (error) {
       console.error("Error fetching prices:", error);
@@ -72,75 +73,78 @@ export default function Calculator() {
   };
 
     return (
-        <div className="calculator-section" id='calc'>
+        <div>
+          <div className="calculator-section" id='calc'>
           <div className="main-heading">
-            <p>Calculator</p>
+              <p>Calculator</p>
           </div>
-        <div className="main-display">
-            <div className="parameter-container">
-              {Object.keys(params).map((key) => (
-                <div className="parameter-inner-container" key={key}>
-                <div className="label">
-                    <p>
-                    {paramLabels[key] || key} :
-                    </p>
-                </div>
-                {['R', 'V'].includes(key) ? (
-                  <div>
-                    <input
-                    className=" slider"
-                    type="range"
-                    min={paramMins[key]}
-                    max={paramMaxs[key]}
-                    step={paramSteps[key]}
-                    value={params[key]}
-                    onChange={(e) =>
-                      handleParamChange(key, parseFloat(e.target.value))
-                    }
-                  />
-                   <div className="value-display">
-                    {(params[key] * 100).toFixed(1)}%
+          <div className="main-display">
+              <div className="parameter-container">
+                {Object.keys(params).map((key) => (
+                  <div className="parameter-inner-container" key={key}>
+                  <div className="label">
+                      <p>
+                      {paramLabels[key] || key} :
+                      </p>
                   </div>
+                  {['R', 'V'].includes(key) ? (
+                    <div>
+                      <input
+                      className=" slider"
+                      type="range"
+                      min={paramMins[key]}
+                      max={paramMaxs[key]}
+                      step={paramSteps[key]}
+                      value={params[key]}
+                      onChange={(e) =>
+                        handleParamChange(key, parseFloat(e.target.value))
+                      }
+                    />
+                    <div className="value-display">
+                      {(params[key] * 100).toFixed(1)}%
+                    </div>
+                    </div>
+                  ) : (
+                    <Custom_Button
+                      name={key}
+                      value={params[key]}
+                      onChange={handleParamChange}
+                      step={paramSteps[key]}
+                      min={paramMins[key]}
+                    />
+                  )}
                   </div>
-                ) : (
-                  <Custom_Button
-                    name={key}
-                    value={params[key]}
-                    onChange={handleParamChange}
-                    step={paramSteps[key]}
-                    min={paramMins[key]}
-                  />
-                )}
-                </div>
-              ))}
-            </div>
-            {optionsPrice && (
-              <div className="prices">
-                <Tilt
-                style={{
-                    width: "100%",
-                    height: "100px",
-                    borderRadius: "12px",
-                }}
-                >
-                <div className="call-price">
-                    Call Price: ${optionsPrice.call_price}
-                </div>
-                </Tilt>
-                <Tilt
-                style={{
-                    width: "100%",
-                    height: "100px",
-                    borderRadius: "12px",
-                }}
-                >
-                <div className="put-price">
-                    Put Price: ${optionsPrice.put_price}
-                </div>
-                </Tilt>
+                ))}
               </div>
-            )}
+              {optionsPrice && (
+                <div className="prices">
+                  <Tilt
+                  style={{
+                      width: "100%",
+                      height: "100px",
+                      borderRadius: "12px",
+                  }}
+                  >
+                  <div className="call-price">
+                      Call Price: ${optionsPrice.call_price}
+                  </div>
+                  </Tilt>
+                  <Tilt
+                  style={{
+                      width: "100%",
+                      height: "100px",
+                      borderRadius: "12px",
+                  }}
+                  >
+                  <div className="put-price">
+                      Put Price: ${optionsPrice.put_price}
+                  </div>
+                  </Tilt>
+                </div>
+              )}
+            </div>
           </div>
+          <Greeks params={params} />
         </div>
     )
 }

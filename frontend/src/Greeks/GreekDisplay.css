@@ -1,0 +1,60 @@
+.greek-value-container {
+    width: 11rem;
+    padding: 1rem;
+    font-size: 1.25rem;
+    color: whitesmoke;
+    background-color: #061826;
+    border-radius: 1rem;
+}
+
+@media(max-width: 600px) {
+    .greek-value-container {
+        width: 100%;
+    }
+}
+
+.positive-greek {
+    color: #23CE6B;
+}
+
+.negative-greek {
+    color: #F52F57;
+}
+
+.greek-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.info-icon {
+    cursor: pointer;
+}
+
+.css-tooltip .info-icon {
+    position: relative;
+}
+
+.css-tooltip .info-icon:hover::after {
+    content: attr(data);
+    position: absolute;
+    background-color: #333;
+    width: 10rem;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 6px;
+    z-index: 1000;
+    font-size: 0.8rem;
+    bottom: 120%; 
+    left: -110%;
+    transform: translateX(-50%);
+}
+
+ .css-tooltip .info-icon:hover::before {
+    content: "";
+    position: absolute;
+    z-index: 1000;
+    top: auto;
+    bottom: 110%;
+    left: 50%;
+}

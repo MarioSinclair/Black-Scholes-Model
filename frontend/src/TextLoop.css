@@ -1,12 +1,10 @@
 /* TextLoop.css */
 
 .text-loop {
-  width: 70%;
   display: flex;
-  margin: auto;
-  padding: 1rem 0rem;
   box-sizing: border-box;
   text-align: center;
+  margin: auto;
 }
 
 .text {
@@ -28,6 +26,7 @@
     .text-loop {
       width: 80%;
       flex-wrap: wrap;
+      padding: 0;
     }
 
     .text {

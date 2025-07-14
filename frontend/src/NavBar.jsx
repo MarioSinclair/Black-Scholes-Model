@@ -22,9 +22,9 @@ function Nav() {
                     <div className="bar bottom-bar"></div>
                 </div>
                 <ul className={`navbar-links${menuOpen ? ' show' : ''}`}>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="#calc">Calculator</a></li>
-                    <li><a href="#form">Formula</a></li>
+                    <li><a href="#home" onClick={() => setMenuOpen(!menuOpen)}>Home</a></li>
+                    <li><a href="#calc" onClick={() => setMenuOpen(!menuOpen)}>Calculator</a></li>
+                    <li><a href="#form" onClick={() => setMenuOpen(!menuOpen)}>Formula</a></li>
                 </ul>
             </div>
             

@@ -6,13 +6,18 @@ import './Formula.css'
 export default function Formula() {
   return (
     <div className="formula" id="form" >
-          <div className="main-heading">
-            <p>Formula</p>
-          </div>
+          
           <div className="paragraph">
+          <div className="main-heading">
+            <p1>Formula</p1>
+          </div>
             <p>
-              The BSM model culminates in a partial differential equation (PDE) that describes how the price of an option changes over time. 
-              The solution to this PDE, under specific boundary conditions, yields the formulas for pricing European call and put options.
+              The equation works by modeling how the price of the option changes over time, assuming the stock moves randomly but with a known average and risk.
+              The formula gives you a fair price for the option so that no one can make a guaranteed profit (no arbitrage).
+              <br />
+              <br />
+              In short:
+              It’s a tool to fairly price options by predicting how likely they are to end up in profit.
             </p>
           </div>
           <TextLoop />
@@ -29,6 +34,7 @@ export default function Formula() {
             }
             </MathJax>
         </MathJaxContext>
+        <div className="note">**N(<i>x</i>) refers to the cumulative standard normal distribution function** </div>
     </div>
   );
 }

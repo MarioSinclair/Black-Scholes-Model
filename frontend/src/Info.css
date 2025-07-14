@@ -1,13 +1,21 @@
+.info-section {
+    width: 60%;
+    margin: auto;
+}
+
 .paragraph {
     font-size: 1.2rem;
     margin: auto;
-    width: 70%;
     text-align: left;
-    padding: 2rem;
+    padding: 1rem 0rem;
 }
 
 @media (max-width:800px) {
     .paragraph {
         width: 80%;
+    }
+    .info-section {
+        width: 100%;
+        margin: auto;
     }
 }

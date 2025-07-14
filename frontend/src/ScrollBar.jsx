@@ -18,7 +18,7 @@ export default function ScrollBar() {
                     width: "100%",
                     background: "black",
                     transformOrigin: "left",
-                    zIndex: 9999,
+                    zIndex: 2001,
                 }}
         />
         </div>

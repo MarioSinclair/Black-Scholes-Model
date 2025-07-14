@@ -1,0 +1,91 @@
+.greeks-container {
+    width: 60%;
+    margin: auto;
+    padding-top: 3rem;
+}
+
+@media(max-width: 600px) {
+    .greeks-container {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+.greeks-inner-container {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.greeks-heading {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.greeks-heading-container {
+    padding-top: 2rem;
+}
+
+.greeks-button-container {
+    width: 8rem;
+    padding: 0.5rem;
+    margin: 1rem 0rem;
+    background-color: #364958;
+    border-radius: 2rem;
+}
+
+.active-put-btn {
+    border: none;
+    padding: 0.5rem 1.3rem;
+    border-radius: 1rem;
+    margin: auto;
+    cursor: pointer;
+    color: white;
+    background-color: #F52F57;
+}
+
+.inactive-put-btn {
+    border: none;
+    padding: 0.5rem 1.3rem;
+    border-radius: 1rem;
+    margin: auto;
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+}
+
+.active-call-btn {
+    border: none;
+    padding: 0.5rem 1.3rem;
+    border-radius: 1rem;
+    margin: auto;
+    cursor: pointer;
+    color: white;
+    background-color: #23CE6B;
+}
+
+.inactive-call-btn {
+    border: none;
+    padding: 0.5rem 1.3rem;
+    border-radius: 1rem;
+    margin: auto;
+    cursor: pointer;
+    background-color: none;
+    color: white;
+    background-color: transparent;
+}
+
+
+.greeks-list {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+@media (max-width: 800px) {
+    .greeks-list {
+        gap: 1rem;
+    }
+}

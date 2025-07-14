@@ -3,12 +3,10 @@ import './Info.css';
 export default function Info() {
     return (
         <div className='info-section' id='info'>
-            <div className="main-heading">
-               <p>
-                    Key Assumptions
-               </p>
-            </div>  
             <div className="paragraph">
+                <div className="main-heading">
+                    <p1>Key Assumptions</p1>
+                </div>  
                 <p>
                     The elegance and closed-form solution of the BSM model are achieved through a set of simplifying
                     assumptions about asset price behavior and market characteristics. 
@@ -17,7 +15,7 @@ export default function Info() {
                 <p>Asset Price Behavior:</p>
                 <ul>
                     <li>The asset price changes are random and continuous (no jumps).</li>
-                    <li>The asset returns are assumed to be normally distributed when continuously compounded</li>
+                    <li>The asset returns are assumed to be normally distributed when continuously compounded.</li>
                     <li>The volatility of the asset is known and remains constant throughout the life of the option.</li>
                 </ul>
                 <p>Market Characteristics:</p>
