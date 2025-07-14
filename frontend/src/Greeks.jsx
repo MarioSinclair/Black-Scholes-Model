@@ -12,7 +12,7 @@ export default function Greeks({ params }) {
   useEffect(() => {
     const getGreeks = async () => {
       try {
-        const res = await axios.post('https://black-scholes-pricing-ruddy.vercel.app/api/greeks', {
+        const res = await axios.post('https://black-scholes-model-uhsp.onrender.com/api/greeks', {
           ...params,
           option_type: optionType,
         });
